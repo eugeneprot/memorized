@@ -77,3 +77,14 @@
 .digit-disp-fail{
     background-color: #d9534f;
 }
+
+.digital-display{
+  height: 50px;
+}
+
+.keypad-display{
+  border-radius: 10px;
+  padding: 3px 3px 3px 3px;
+  margin: 2px 2px 2px 2px;
+}
+

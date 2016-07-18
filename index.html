@@ -26,7 +26,7 @@
       <div class="container">
         <div class="row " >
           <!-- Generator -->
-          <div class="col-xs-2 col-sm-2 col-md-3 col-lg-2">
+          <div class="col-xs-2 col-sm-3 col-md-3 col-lg-2">
             <div class="input-group">
               <span id="lenGen-addon" class="input-group-addon">Len:</span>
               <input id="idLen" class="form-control" type="number" min="6" max="30" step="1" value="8" aria-desctibedby="lenGen-addon">
@@ -36,7 +36,7 @@
             </div>
           </div>
           <!-- Password -->
-          <div class="col-xs-4 col-sm-4 col-md-6 col-lg-6">
+          <div class="col-xs-4 col-sm-5 col-md-6 col-lg-6">
             <div class="input-group">
               <span id="password-addon" class="input-group-addon">Password:</span>
               <input id="idPassword" class="form-control" type="text" aria-desctibedby="password-addon">
@@ -47,7 +47,7 @@
             </div>
           </div>
           <!-- Stop -->
-          <div class="col-xs-1 col-xs-offset-5 col-sm-1 col-sm-offset-5 col-md-1 col-md-offset-2 col-lg-1 col-lg-offset-3">
+          <div class="col-xs-1 col-xs-offset-5 col-sm-1 col-sm-offset-3 col-md-1 col-md-offset-2 col-lg-1 col-lg-offset-3">
 <!--                <button id="idStop" class="btn btn-danger disabled" type="button">Stop</button> -->
                 <button id="idStop" class="btn btn-danger" type="button">Stop</button>
           </div>
@@ -57,40 +57,37 @@
     
     <!-- Begin page content -->
     <div class="container">
-      <div id="idDigitsDisplay">
+      <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+            <div id="idDigitsDisplay" class="digital-display center-block text-center" >
+            </div>
+          </div>
       </div>
-      <div id="idKeyPadDisplay">
-        <table >
-            <tbody>
-                <tr>
-                    <td><span id="idKp7" class="digit-keypad">7</span></td>
-                    <td><span id="idKp8" class="digit-keypad">8</span></td>
-                    <td><span id="idKp9" class="digit-keypad">9</span></td>
-                </tr>
-                <tr>
-                    <td><span id="idKp4" class="digit-keypad">4</span></td>
-                    <td><span id="idKp5" class="digit-keypad">5</span></td>
-                    <td><span id="idKp6" class="digit-keypad">6</span></td>
-                </tr>
-                <tr>
-                    <td><span id="idKp1" class="digit-keypad">1</span></td>
-                    <td><span id="idKp2" class="digit-keypad">2</span></td>
-                    <td><span id="idKp3" class="digit-keypad">3</span></td>
-                </tr>
-                <tr>
-                    <td colspan=3><span id="idKp0" class="digit-keypad">0</span></td>
-                </tr>
-            </tbody>
-        </table>
+      <div class="row">
+          <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+            <div id="idKeyPadDisplay" class="keypad-display center-block">
+              <div id="idKeyPadDisplayRow3" class="center-block text-center" >
+                    <span id="idKp7" class="digit-keypad">7</span>
+                    <span id="idKp8" class="digit-keypad">8</span>
+                    <span id="idKp9" class="digit-keypad">9</span>
+              </div>
+              <div id="idKeyPadDisplayRow2" class="center-block text-center" >
+                    <span id="idKp4" class="digit-keypad">4</span>
+                    <span id="idKp5" class="digit-keypad">5</span>
+                    <span id="idKp6" class="digit-keypad">6</span>
+              </div>
+              <div id="idKeyPadDisplayRow1" class="center-block text-center" >
+                    <span id="idKp1" class="digit-keypad">1</span>
+                    <span id="idKp2" class="digit-keypad">2</span>
+                    <span id="idKp3" class="digit-keypad">3</span>
+              </div>
+              <div id="idKeyPadDisplayRow0" class="center-block text-center" >
+                    <span id="idKp0" class="digit-keypad">0</span>
+              </div>
+            </div>
+          </div>
       </div>
-      <!--
-      <div class="page-header">
-        <h1>Sticky footer with fixed navbar</h1>
-      </div>
-      <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body > .container</code>.</p>
-      <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
-      -->
-    </div>
+    </div> <!-- container -->
     
     
     <footer class="footer">

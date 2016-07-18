@@ -83,15 +83,13 @@ CDisplay.prototype.setDigitDisplay = function (){
     this.digitalDisplay = $("#idDigitsDisplay");
     this.digitalDisplay.empty();
     for(var i=0;i<this.text.length;i++){
-        var name=$("<span />").attr({id:"idDg"+i}).addClass("digit-disp").text(this.text[i]);
+        var name=$("<span />").attr({id:"idDg"+i}).addClass("digit-disp").addClass("text-center").text(this.text[i]);
         this.digitalDisplay.append(name);
     }
 }
 
 CDisplay.prototype.setKeypadDisplay = function (){
-    for(var i=9;i>=0; i--){
-        $("#idKp"+i).css("digit-keypad");// не работает!!!
-    }
+    $(".digit-keypad-select").removeClass("digit-keypad-select");
 }
 
 CDisplay.prototype.clear=function (){
@@ -108,11 +106,11 @@ CDisplay.prototype.selectAt=function (AI){
 }
 
 CDisplay.prototype.success = function (){
-    $("#idDigitsDisplay,#idKeyPadDisplay").addClass("digit-disp-success");
-    setTimeout(function (){$("#idDigitsDisplay,#idKeyPadDisplay").removeClass("digit-disp-success");},500);
+    $("#idKeyPadDisplay").addClass("digit-disp-success");
+    setTimeout(function (){$("#idKeyPadDisplay").removeClass("digit-disp-success");},500);
 }
 
 CDisplay.prototype.fail = function (){
-    $("#idDigitsDisplay,#idKeyPadDisplay").addClass("digit-disp-fail");
-    setTimeout(function (){$("#idDigitsDisplay,#idKeyPadDisplay").removeClass("digit-disp-fail");},500);
+    $("#idKeyPadDisplay").addClass("digit-disp-fail");
+    setTimeout(function (){$("#idKeyPadDisplay").removeClass("digit-disp-fail");},500);
 }
