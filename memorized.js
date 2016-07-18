@@ -90,7 +90,7 @@ CDisplay.prototype.setDigitDisplay = function (){
 
 CDisplay.prototype.setKeypadDisplay = function (){
     for(var i=9;i>=0; i--){
-        $("#idKp"+i).css("digit-keypad");
+        $("#idKp"+i).css("digit-keypad");// не работает!!!
     }
 }
 
