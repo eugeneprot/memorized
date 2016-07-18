@@ -1,0 +1,79 @@
+.navbar {
+  min-height: 20px;
+}
+
+.digit-disp-old {
+    width: 30;
+    height: 30;
+    border: 1px solid #e7e7e7;
+    padding: 5px 5px 5px 5px;
+}
+
+
+.digit-disp {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 10px;
+  margin: 1px 1px 1px 1px;
+
+  color: #555;
+  background-color: #eee;
+  border: 1px solid #ccc;
+
+}
+/*
+.digit-disp-default{
+  color: #555;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+*/
+.digit-disp-select{
+/*  color: #398439;*/
+  color: #fff;
+  background-color: #5cb85c;
+  border: 1px solid #4cae4c;
+}
+
+.digit-keypad{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 10px;
+  margin: 2px 2px 2px 2px;
+
+  color: #555;
+  background-color: #eee;
+  border: 1px solid #ccc;
+
+}
+
+.digit-keypad-select{
+/*  color: #398439;*/
+  color: #fff;
+  background-color: #5cb85c;
+  border: 1px solid #4cae4c;
+}
+
+.digit-disp-success{
+    background-color: #5cb85c;
+}
+
+.digit-disp-fail{
+    background-color: #d9534f;
+}
