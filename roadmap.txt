@@ -1,0 +1,6 @@
+2016.07.18
+  1. Add short key for buttons.
+  2. Change spans to buttons in keypad.
+  3. Realize selected block for input elements.
+  4. Add statistics.
+  5. Add analysis security
