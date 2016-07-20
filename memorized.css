@@ -88,3 +88,15 @@
   margin: 2px 2px 2px 2px;
 }
 
+.count-span{
+  font-size: 120px;
+  font-weight: bold;
+}
+
+.fail-count-span{
+  color: #d9534f;
+}
+
+.succ-count-span{
+  color: #5cb85c;
+}

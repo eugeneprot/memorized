@@ -73,6 +73,8 @@ function startRun(event){
 
 // ////////////////////////////////
 function CDisplay(AText,ACurr){
+    this.cntSucc=0;
+    this.cntFail=0;
     this.text = AText;
     this.curr = ACurr;
     this.setDigitDisplay();
@@ -93,6 +95,8 @@ CDisplay.prototype.setKeypadDisplay = function (){
 }
 
 CDisplay.prototype.clear=function (){
+    $("#idSuccCount").text(this.cntSucc=0);
+    $("#idFailCount").text(this.cntFail=0);
     this.digitalDisplay.empty();
     this.setKeypadDisplay();
 }
@@ -107,10 +111,12 @@ CDisplay.prototype.selectAt=function (AI){
 
 CDisplay.prototype.success = function (){
     $("#idKeyPadDisplay").addClass("digit-disp-success");
-    setTimeout(function (){$("#idKeyPadDisplay").removeClass("digit-disp-success");},500);
+    $("#idSuccCount").text(++this.cntSucc);
+    setTimeout(function (){$(".digit-disp-success").removeClass("digit-disp-success");},500);
 }
 
 CDisplay.prototype.fail = function (){
     $("#idKeyPadDisplay").addClass("digit-disp-fail");
-    setTimeout(function (){$("#idKeyPadDisplay").removeClass("digit-disp-fail");},500);
+    $("#idFailCount").text(++this.cntFail);
+    setTimeout(function (){$(".digit-disp-fail").removeClass("digit-disp-fail");},500);
 }
