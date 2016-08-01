@@ -38,19 +38,22 @@ function nextKeyPress(event){
     // ESC не видит
 //    console.log(event);
     // может быть нужно предварительно отключать KeyPress?
+    nextCharProcess(event.data,event.charCode);
+}
 
-    if(event.charCode==event.data.text.charCodeAt(event.data.curr)){
-        if(event.data.curr < (event.data.text.length - 1)){
-            event.data.curr++;
+function nextCharProcess(APassword,ACharCode){
+    if(ACharCode==APassword.text.charCodeAt(APassword.curr)){
+        if(APassword.curr < (APassword.text.length - 1)){
+            APassword.curr++;
         }else{
-            event.data.curr=0;
+            APassword.curr=0;
             window._display.success();
         }
     }else{
-        event.data.curr=0;
+        APassword.curr=0;
         window._display.fail();
     }
-    window._display.selectAt(event.data.curr);
+    window._display.selectAt(APassword.curr);
 }
 
 function initPassword(){
@@ -67,6 +70,13 @@ function startRun(event){
     if(locPassword){
         window._display = new CDisplay(locPassword.text, locPassword.curr);
         window._display.selectAt(0);
+        for(var i=0;i<=9;i++){
+            $( "#idKp"+i ).click(
+                function (APassword,ACharCode){
+                    return function() {nextCharProcess(APassword,ACharCode);}
+                }(locPassword,(""+i).charCodeAt())
+            );
+        }
         $(window).keypress(locPassword, nextKeyPress);
     }
 }
